@@ -1,0 +1,1261 @@
+@charset "UTF-8";
+
+*{box-sizing: border-box;}
+
+#container{
+    max-width: 970px;
+	border: 3px solid black;	
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  /* make it look decent enough */
+ 
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom:5px;
+  position: relative; 
+  background: black;
+  border-radius: 3px; 
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background-image: url("../img/Groupe_223.png");
+	height: 320vh;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+  
+  
+
+/*header*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+	padding-bottom: 20px; 
+}
+
+section{
+	margin-bottom: 20px;
+	
+}
+
+
+
+/* section operation*/
+.operation{
+	background-image: url("../img/operation.png");
+	height: 300px;
+
+	border:1px solid red;
+	background-size: cover;
+}
+
+.operation span{
+	display: block;
+	font-size: 1.5rem;
+	color: white;
+	font-style:normal;
+	padding-left: 40px;
+	font-weight: bold;
+	height: 25vh;
+	width: 100%;
+	display: block;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 40px;
+	
+}
+
+.operation p{
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		padding-top: 80px;
+		font-size: 0.6rem;
+		color: white;
+		width: 100%;
+		padding-left: 99px;
+		font-weight: bold;
+
+
+}
+.operation article {
+	font-size: 1rem;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 40px;
+		}
+
+.operation article i{
+		
+		font-size: 1.7rem;
+		
+		}
+
+.calendrier{
+			background-color: aqua;
+			display: grid;
+			grid-template-columns: repeat(12,1fr);
+			grid-template-rows: auto;
+		
+		}
+
+.calendrier p{
+
+	
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			font-size: 0.6rem;
+			grid-column: 1/ span 9;
+			grid-row: 2;
+			padding-left: 30px;
+			padding-top: 20px;	
+	}
+	.calendrier h1{
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		text-align: center;
+		grid-column: 1/ span 12;
+		grid-row: 1;
+		padding-top: 10px;
+		padding-right: 100px;
+		font-size: 2.1rem;
+	
+
+	}
+
+.calendrier figure i{
+	font-size: 3.5rem;
+	grid-column: 9/span 3;
+	grid-row: 2;
+	
+}
+
+
+
+span.espace{border:1px solid green;
+	display:block;
+	width:50px;
+}
+
+ 
+	.horloge i{
+		font-size: 3rem;
+	}
+	
+
+	.horloge {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.horloge p{
+		width: 49%;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		padding-left: 7px;
+		font-size: 0.9rem;
+		padding-top: 5px;
+		line-height: 3vh;
+		padding-bottom: 20px;
+	}
+
+	.soushorloge p{
+		font-size: 0.8rem;
+		padding-left: 20px;
+	}
+	.horloge i{
+		padding-top:10px;
+		padding-left: 10px;
+	}
+	.demarche h1{
+		font-size: 1.7rem;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		padding-left: 50px;
+		margin: 0;
+	}
+	.sousdemarche{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.sousdemarche span{
+		padding-top:30px ;
+		display: block;
+	}
+
+	.docteur{
+		background-image: url("../img/docteur.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 50vh;
+	opacity: 0.8 ;
+	background-color: black;
+
+
+	
+
+	
+	
+	}
+	.docteur i{
+		font-size: 5rem;
+		color: white;
+		float: right;
+		padding-right: 40px;
+		padding-top: 50px;
+		}
+	
+	.docteur p{
+		color: white;
+		font-weight:bolder ;
+		padding-top: 170px;
+		padding-left: 50px;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		width: 50%;
+		font-size: 1.5rem;
+
+	}
+
+	.docteur2{
+		background-image: url("../img/docteur2.jpg");
+		background-size: cover;
+		width: 100%;
+		height: 50vh;
+		opacity: 0.8 ;
+		background-color: black;
+	
+	}
+
+	.docteur2 i{
+		font-size: 4rem;
+		color: white;
+		float: right;
+		padding-right: 40px;
+		padding-top: 50px;
+	}
+
+	.docteur2 p{
+		color: white;
+		font-weight:bolder ;
+		padding-top: 170px;
+		padding-left: 50px;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		width: 50%;
+		font-size: 1.5rem;
+
+	}
+
+	.hopital{
+		display: block;
+	}
+
+	.docteur3{
+		background-image: url("../img/douleur.jpg");
+		background-size: cover;
+		width: 100%;
+		height: 50vh;
+		opacity: 0.8 ;
+		background-color: black;
+	}
+	.docteur3 i{
+		font-size: 4rem;
+		color: white;
+		float: right;
+		padding-right: 40px;
+		padding-top: 50px;
+	}
+
+	.docteur3 p{
+		color: white;
+		font-weight:bolder ;
+		padding-top: 210px;
+		padding-left: 50px;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		width: 50%;
+		font-size: 1.5rem;
+
+	}
+	.docteur4{
+		background-image: url("../img/bouche.jpg");
+		background-size: cover;
+		width: 100%;
+		height: 50vh;
+		opacity: 0.8 ;
+		background-color: black;
+	}
+	.docteur4 i{
+		font-size: 4rem;
+		color: white;
+		float: right;
+		padding-right: 40px;
+		padding-top: 50px;
+	}
+
+	.docteur4 p{
+		color: white;
+		font-weight:bolder ;
+		padding-top: 200px;
+		padding-left: 50px;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		width: 50%;
+		font-size: 1.5rem;	
+	}
+	.docteur4{
+		background-image: url("../img/bouche.jpg");
+		background-size: cover;
+		width: 100%;
+		height: 50vh;
+		opacity: 0.8 ;
+		background-color: black;
+	}
+	.docteur4 i{
+		font-size: 4rem;
+		color: white;
+		float: right;
+		padding-right: 40px;
+		padding-top: 50px;
+	}
+
+	.docteur4 p{
+		color: white;
+		font-weight:bolder ;
+		padding-top: 200px;
+		padding-left: 50px;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		width: 50%;
+		font-size: 1.5rem;
+	}
+	.docteur5{
+		background-image: url("../img/dent.jpg");
+		background-size: cover;
+		width: 70%;
+		height: 50vh;
+		opacity: 0.8 ;
+		background-color: black;
+	}
+	.docteur5 i{
+		font-size: 8rem;
+		color: white;
+		float: right;
+		padding-right: 40px;
+		padding-top: 50px;
+	}
+
+	.docteur5 p{
+		color: white;
+		font-weight:bolder ;
+		padding-top: 200px;
+		padding-left: 50px;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		width: 50%;
+		font-size: 1.5rem;
+	}
+	.docteur6{
+		background-image: url("../img/zebe.jpg");
+		background-size: cover;
+		width: 100%;
+		height: 50vh;
+		opacity: 0.8 ;
+		background-color: black;}
+
+	.docteur6 i{
+		font-size: 8rem;
+		color: white;
+		float: right;
+		padding-right: 40px;
+		padding-top: 50px;
+	}
+
+	.docteur6 p{
+		color: white;
+		font-weight:bolder ;
+		padding-top: 200px;
+		padding-left: 50px;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		width: 50%;
+		font-size: 1.5rem;
+	}
+	.docteur7{
+		background-image: url("../img/machoire.jpg");
+		background-size: cover;
+		width: 100%;
+		height: 50vh;
+		opacity: 0.8 ;
+		background-color: black;}
+
+	.docteur7 i{
+		font-size: 8rem;
+		color: white;
+		float: right;
+		padding-right: 40px;
+		padding-top: 50px;
+	}
+
+	.docteur7 p{
+		color: white;
+		font-weight:bolder ;
+		padding-top: 200px;
+		padding-left: 50px;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		width: 50%;
+		font-size: 1.5rem;
+	}
+
+	.docteur8{
+		background-image: url("../img/conseil.jpg");
+		background-size: cover;
+		width: 100%;
+		height: 50vh;
+		opacity: 0.8 ;
+		background-color: black;}
+
+	.docteur8 i{
+		font-size: 8rem;
+		color: white;
+		float: right;
+		padding-right: 40px;
+	
+	}
+
+	.docteur8 p{
+		color: white;
+		font-weight:bolder ;
+		padding-top: 200px;
+		padding-left: 50px;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		width: 100%;
+		font-size: 1.5rem;
+	}
+
+	.conseil{
+		display: flex;
+		flex-direction: column;
+	}
+	.conseil h1{
+		font-size: 1.7rem;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		padding-left: 30px;
+		margin: 0;
+	}
+
+	article.sousdenture{
+		font-size: 0.9rem;
+		padding-left: 10px;
+
+	}
+
+	.conseil span{
+		display: block;
+		float: right;
+		padding-left: 70px;
+		padding-bottom: 70px;
+		margin: 0;
+			}
+	
+	.denture{
+		background-image: url("../img/denture.png");
+		width: 370px;
+		height: 200px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding-right: 30px;
+	}
+
+	.denture p{
+		 text-align: center;
+		 position: relative;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		top: 40%;
+		font-weight: bold;
+		margin: 0;
+
+		 	}
+
+	.denture i{
+		position: relative;
+		font-size: 4rem;
+		left: 29%;
+		top:15%;	
+		z-index: 1;
+	}
+	.bloc p{
+		position: relative;
+		top: 18%;
+
+	}
+
+	.bloc{
+		position: relative;
+		background-color: aqua;
+		width: 55%;
+		height: 25vh;
+		left: 25%;
+		 top: -30%  
+	}
+
+	.urgence{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 50px;
+		background-color: gainsboro;
+	}
+	.urgence i{
+		font-size: 5rem;
+		color: #f33d33;
+		padding-top: 20px;
+	}
+
+	.urgence p {
+		font-size: 2.3rem;
+		text-align: center;
+	}
+
+	.adresse{
+		display: grid;
+		grid-template-columns: repeat(12,1fr);
+		grid-row: auto;
+		padding-bottom: 110px;
+		width: 100%;
+		
+	}
+	.adresse1{
+		grid-column: 1/ span 6;
+		grid-row: 1;
+		padding: 10px;
+		padding-top: 50px;
+		line-height: 3vh;
+	}
+
+	.adresse1  a{
+		font-size: 0.6rem;
+	}
+	.adresse2{
+		grid-column: 7/ span 6;
+		grid-row: 1;
+	}
+
+	.sousadresse1 i{ 
+               color: aqua;
+			   float: left;
+			   padding: 10px;
+	}
+	.sousadresse1 span{
+		display: block;
+		font-size: 0.8rem;
+		padding-top: 20px;
+	}
+
+	.sousadresse2 i{
+		color: aqua;
+		float: left;
+		padding: 10px;
+	}
+	.adresse2 span{
+		display: block;
+		font-size: 0.8rem;
+		padding-top: 5px;
+	
+	}
+	.sousadresse2{
+		
+	}
+
+	.adresse2 article{
+	display: block;
+	padding-top: 40px;
+	}
+	.adresse2 article i{
+		display: block;
+	 font-size: 2rem;
+	 position: relative;
+	}
+
+.final{
+	background-color: aqua;
+	display: grid;
+	grid-template-columns: repeat(12,1fr);
+	grid-row: auto;
+	}
+
+	.final1{
+		grid-column: 3 /span 5;
+		grid-row: 1;
+		padding-left: 10px;
+	}
+
+	.final2{
+		grid-column: 7/ span 6;
+		grid-row: 1;
+	}
+
+	/* page 2*/
+
+	#containerr{
+		max-width: 980px;
+		padding: 30px;
+		border: 3px solid black;
+		padding: 0;
+	
+	}
+	
+
+	.cabinet{
+		display: flex;
+		background-color: aqua;
+		flex-direction: row;
+		justify-content: space-around;
+		height: 20vh;
+	}
+
+	.cabinet i{
+		display: block;
+		padding-top: 70px;
+	}
+
+	.icone p{
+		font-size: 0.6rem;
+		padding: 10px;
+		margin-top: 20px;
+
+	}
+
+	.icone i{
+		font-size: 1.5rem;
+		float: left;
+		padding: 2px;
+	}
+
+	.icone span {
+		display: block;
+	}
+	.image figure  img{
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.image p{
+		font-size: 0.8rem;
+		text-align: start;
+		padding: 10px;
+	}
+	.equipe h1{
+		padding-left: 20px;
+	}
+.equipe p{
+	font-size: 0.7rem;
+	padding: 15px;
+}
+
+.personnage{
+	width: 100%;
+	font-size: 0.5rem;
+}
+
+
+.perosnnage p{
+	font-size: 0.5rem;
+}
+
+.perso1{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding-right: 30px;
+}
+
+.perso1 article{
+	margin-left: -70px;
+	position: relative;
+	left: 0%;
+}
+.perso1 figure img{
+	width: 80%;
+	margin-left: -20px;
+}
+.perso1 h2{
+	font-size: 0.7rem;
+	padding: 0;
+}
+
+.perso1 span{
+	display: block;
+	font-size: 0.5rem;
+	color: aqua;
+	font-weight: bolder;
+height: 5vh;
+}
+
+.perso1 p{
+	font-size: 0.6rem;		
+	width: 100%;
+}
+
+
+
+.perso2{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding-right: 30px;
+}
+
+.perso2 article{
+	margin-left: -70px;
+	position: relative;
+	left: 0%;
+}
+.perso2 figure img{
+	width: 80%;
+	margin-left: -20px;
+}
+.perso2 h2{
+	font-size: 0.7rem;
+	padding: 0;
+}
+
+.perso2 span{
+	display: block;
+	font-size: 0.5rem;
+	color: aqua;
+	font-weight: bolder;
+height: 5vh;
+}
+
+.perso2 p{
+	font-size: 0.6rem;		
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.perso3{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding-right: 30px;
+}
+
+.perso3 article{
+	margin-left: -70px;
+	position: relative;
+	left: 0%;
+}
+.perso3 figure img{
+	width: 80%;
+	margin-left: -20px;
+}
+.perso3 h2{
+	font-size: 0.7rem;
+	padding: 0;
+}
+
+.perso3 span{
+	display: block;
+	font-size: 0.5rem;
+	color: aqua;
+	font-weight: bolder;
+	height: 5vh;
+	text-align: center;
+}
+
+.perso3 p{
+	font-size: 0.6rem;		
+	width: 100%;
+}
+
+.perso4{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding-right: 30px;
+}
+
+.perso4 article{
+	margin-left: -70px;
+	position: relative;
+	left: 0%;
+}
+.perso4 figure img{
+	width: 70%;
+	margin-left: -20px;
+}
+.perso4 h2{
+	font-size: 0.7rem;
+	padding: 0;
+}
+
+.perso4 span{
+	display: block;
+	font-size: 0.5rem;
+	color: aqua;
+	font-weight: bolder;
+	height: 3vh;
+	text-align: center;
+}
+
+.perso4 p{
+	font-size: 0.6rem;		
+	width: 100%;
+}
+
+/*page3*/
+
+section.service{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 20vh;
+	background-color: aqua;
+
+
+}
+.service article h1{
+	height: 10vh;
+	font-weight: bold;
+	font-size: 2rem;
+	padding: 0;
+	margin: 0;
+	padding-left: 30px;
+}
+.service article p{
+	font-size: 0.7rem;
+	padding-left: 20px;
+	width: 60%;
+}
+
+.service article {
+	padding: 0;
+	margin: 0;
+	top: 0;
+}
+.service figure i{
+	font-size: 2.4rem;
+	padding-top: 70px;
+}
+
+
+.control{
+	background-image: url("../img/souris.jpg");
+	height: 170px;
+	width: 310px;
+	background-repeat: no-repeat ;
+	background-size: cover;
+	margin-top: 130px;
+	margin-bottom: 260px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+.bloc1{
+	position: absolute;
+	width: 35%;
+	background-color: aqua;
+	height: 20vh;
+	top: 62%;
+	padding: 13px;
+
+}
+
+.bloc1 i{
+	font-size: 3rem;
+	float: right;
+	padding-right: 30px;
+}
+.bloc1 span{
+	display: block;
+	padding-top: 50px;
+	font-size: 1rem;
+	font-weight: bolder;
+	padding-left: 20px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.control p{
+	position: relative;
+	width: 50%;
+	float: right;
+	top: -55%;
+	font-size: 0.8rem;	
+}
+
+.bloc2{
+	position: absolute;
+	width: 35%;
+	background-color: aqua;
+	height: 20vh;
+	left: 57%;
+	top: 95%;
+	font-weight: bolder;
+	padding: 13px;
+}
+
+.bloc2 span{
+	display: block;
+	padding-top: 10px;
+	font-size: 0.70rem;
+	font-weight: bolder;
+	text-align: center;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.bloc2 i{
+	font-size: 2.4rem;
+	padding-left: 30px;
+	padding-top: 20px;
+}
+
+ p.sousbloc2{
+	position: relative;
+	width: 50%;
+	top: 115%;
+	font-size: 0.7rem;				
+}
+.control2{
+	background-image: url("../img/dentition.jpg");
+	height: 170px;
+	width: 310px;
+	background-repeat: no-repeat ;
+	background-size: cover;
+	margin-top: 190px;
+	margin-bottom: 190px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bloc3{
+	position: absolute;
+	width: 35%;
+	background-color: aqua;
+	height: 20vh;
+	top: 125%;
+	padding: 13px;
+
+}
+
+.bloc3 i{
+	padding-top: 10px;
+	font-size: 3rem;
+	padding-left: 35px;
+	
+	
+}
+.bloc3 span{
+	display: block;
+	
+	font-size: 0.78rem;
+	font-weight: bolder;
+	text-align: center;	
+	padding-top: 10px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.control2 p{
+	position: relative;
+	width: 50%;
+	float: right;
+	top: -72%;
+	font-size: 0.8rem;	
+}
+
+.bloc4{
+	position: absolute;
+	width: 35%;
+	background-color: aqua;
+	height: 20vh;
+	left: 57%;
+	top: 158%;
+	font-weight: bolder;
+	padding: 13px;
+}
+
+.bloc4 span{
+	display: block;
+	padding-top: 10px;
+	font-size: 0.70rem;
+	font-weight: bolder;
+	text-align: center;
+	
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.bloc4 i{
+	font-size: 2.4rem;
+	padding-left: 30px;
+	padding-top: 20px;
+}
+
+ p.sousbloc4{
+	position: relative;
+	width: 50%;
+	float: right;
+	top: 110%;
+	font-size: 0.7rem;	
+}
+
+/*page4*/
+
+.demarche1{
+	display: flex;
+	flex-direction: row;
+	background-color: aqua;
+	justify-content: space-around;
+}
+.demarche1 article i{
+	font-size: 3rem;
+	padding-top: 20px;
+	float: right;
+}
+.sousdemarche1{
+	padding-left: 20px;
+}
+
+.sousdemarche1 h1{
+	font-weight: bolder;
+	text-align: center;	
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	margin: 10px;	
+}
+
+.sousdemarche1 span{
+	display: block;
+	font-size: 0.6rem;	
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;	
+}
+
+.tableau{
+	display: grid;
+	grid-template-columns: repeat(12,1fr);
+	grid-template-rows: auto;
+}
+.column1{
+	grid-column: 1 / span 6;
+	grid-row: 1;
+	padding: 10px;
+}
+.column2{
+	grid-column: 7 / span 6;
+	grid-row: 1;
+	padding: 10px;
+}
+
+.souscolumn1 article{
+	background-color: aqua;
+	height: 20vh;
+}
+.souscolumn1 article i{
+	padding-top: 20px;
+	font-size: 2.5rem;
+	padding-left: 45px;
+}
+.souscolumn1 article p{
+	display: block;	
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: bolder;
+	text-align: center;
+	padding-top: 30px;
+}
+.souscolumn1 p{
+	display: block;
+	font-size: 0.78rem;	
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;	
+	padding-top: 20px;
+}
+
+
+
+
+/*page5*/
+
+.maps{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding: 20px;
+}
+
+.sousmaps img{
+	width: 80%;
+	float: right;
+}
+
+.numero{
+	width: 300%;
+	font-size: 0.8rem;
+}
+
+.douleur{
+	display: flex;
+	flex-direction: row;
+		width: 100%;
+		padding: 10px;
+		
+}
+
+.picture img{
+	image-orientation: from-image;
+	width: 180px;
+	height:40vh;
+	background-size: cover;
+	object-fit: cover;
+	
+
+	background-size: 100%;
+}
+
+.douleur article p{
+	width: 100%;
+	font-size: 0.9rem;
+	padding-top: 30px;
+}
+
+.artiste{
+	font-size: 0.7rem;
+	padding: 20px;
+}

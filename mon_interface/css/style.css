@@ -1,0 +1,623 @@
+@charset "UTF-8";
+
+/*-----------------------------------------------
+
+       ********** Table of Contents **********
+
+01. =google fonts         in      style.css
+02. =base
+03. =header
+
+        / page 1 /
+
+04. =section1
+05. =section 2
+06. =section 3 et 4
+07. =section 5 et 6
+08. =section 7
+09. =section 9
+10. =section 10
+11. =section 11
+12. =section 13
+13. =footer
+
+        / page 2 /         in      pricing.css
+
+14. =section 1
+15. =section 2
+16. =section 3
+
+17. =version tablette      in      media.css
+18. =version telephone
+-----------------------------------------------*/
+
+/* ----------------------------
+        02 := base
+---------------------------- */
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    scrollbar-width: auto;
+    scrollbar-color: rgb(215, 215, 215) var(--blanc);
+}
+
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--blanc);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(215, 215, 215);
+    border-radius: 10px;
+    border: 3px solid var(--blanc);
+    height: 6rem;
+}
+
+header, main, footer{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+figure img{
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    color: rgb(127, 127, 127);
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+#container{
+    background-color: white;
+    color: black;
+    width: 100%;
+}
+
+.back_gris{
+    background-color: rgb(245, 245, 245);
+    padding: 4rem 10rem 6rem;
+}
+
+.back_blanc{
+    background-color: white;
+    padding: 4rem 10rem 6rem;
+}
+
+.m_auto{
+    margin: auto;
+}
+
+.ml_0{
+    margin-left: 0 !important;
+    text-align: start !important;
+}
+
+.border_b{
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.interligne{
+    line-height: 1.6rem;
+}
+
+.w_100{
+    width: 100% !important;
+}
+
+.w_mcontent{
+    width: max-content !important;
+}
+
+/* ----------------------------
+        03 := header
+---------------------------- */
+header{
+    padding-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+header figure{
+    width: 11%;
+    margin-left: 10%;
+}
+
+header input, header span{
+    display: none;
+}
+
+nav{
+    padding-top: .5rem;
+    width: max-content;
+    margin-left: 30%;
+}
+
+nav li{
+    padding-right: 1.2rem;
+    font-size: 1rem;
+}
+
+nav a{
+    color: grey;
+}
+
+nav li a:hover{
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.gras{
+    color: black;
+    font-weight: bold;
+}
+
+button:hover{
+    -webkit-box-shadow:rgba(255, 255, 255, 0.7) 0px 5px 15px, inset rgba(255, 255, 255, 0.15) 0px -10px 20px;
+ -khtml-box-shadow:rgba(255, 255, 255, 0.7) 0px 5px 15px, inset rgba(255, 255, 255, 0.15) 0px -10px 20px;
+   -moz-box-shadow:rgba(255, 255, 255, 0.7) 0px 5px 15px, inset rgba(255, 255, 255, 0.15) 0px -10px 20px;
+     -o-box-shadow:rgba(255, 255, 255, 0.7) 0px 5px 15px, inset rgba(255, 255, 255, 0.15) 0px -10px 20px;
+        box-shadow:rgba(255, 255, 255, 0.7) 0px 5px 15px, inset rgba(255, 255, 255, 0.15) 0px -10px 20px;
+}
+
+/* ----------------------------
+        04 := section1
+---------------------------- */
+.fille{
+    background-image: url(../assets/hero-tour.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+    color: white;
+    padding-top: 10%;
+}
+
+.fille h1:before, .content h1:before{
+    content: "";
+    display: block;
+    width: 20%;
+    background-color: white;
+    height: 5px;
+    margin: auto;
+    margin-bottom: 1.2rem;
+}
+
+.fille h1{
+    width: 82%;
+    margin: 1.2rem auto 0;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.fille p{
+    margin: 1rem auto;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.fille .article_demo{
+    margin: 5rem auto;
+}
+
+.fille button{
+    padding: 1rem 1.8rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: #fff186;
+}
+
+.fille button a{
+    color: black;
+    font-weight: bold;
+}
+
+.fille .demo{
+    align-self: center;
+    margin-left: 1.5rem;
+    color: white;
+}
+
+.demo i{
+    padding-left: .5rem;
+}
+
+.sara{
+    border-right: 1px solid white;
+    padding-right: .5rem;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-right: 1rem;
+}
+
+.sara span{
+    font-weight: bold;
+}
+
+.sara span:last-child{
+    font-weight: lighter !important;
+    font-size: .9rem;
+}
+
+
+/* ----------------------------
+        05 := section2
+---------------------------- */
+.gris{
+    background-color: #DCDCDC;
+    padding: 2rem 4rem;
+    opacity: .5;
+}
+
+.gris span{
+    align-self: center;
+}
+
+.gris figure{
+    margin-left: 4%;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.gris figure img{
+    margin-left: 4%;
+    width: 12%;
+    height: 4rem;
+}
+
+
+/* ---------------------------------
+        06 := section3 et section4
+---------------------------------- */
+.sect2{
+    padding: 4rem 6rem 0 9rem;
+}
+
+.slider h2{
+    font-weight: lighter;
+    width: 50%;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.slider h2::after, .sect11 h3::after, .deux_articles h3::after{
+    content: "";
+    display: block;
+    width: 50%;
+    background-color: black;
+    height: 2px;
+    margin: .5rem auto 0;
+}
+
+.slider p{
+    width: 52%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.sect2 .arrow{
+    margin-top: 22%;
+}
+
+.arrow{
+    height: 60px;
+    margin-right: .8rem;
+    opacity: .5;
+    width: 2%;
+}
+
+.arrow ~ .arrow{
+    margin-right: 0;
+    margin-left: .8rem;
+}
+
+.arrow:hover{
+    width: 3%;
+    height: 80px;
+}
+
+.milieux{
+    width: 90%;
+    margin: 0;
+}
+
+.first{
+    width: 100%;
+    z-index: -1;
+}
+
+.second{
+    width: 90%;
+    z-index: 10;
+    position: relative;
+    bottom: 52%;
+    height: 40%;
+    left: 5%;
+}
+
+.slider + section p{
+    width: 62%;
+    text-align: start;
+}
+
+.sect4{
+    margin-top: -40%;
+}
+
+/* ---------------------------------------
+        07 := section 5 et section 6 
+--------------------------------------- */
+.surf h2, .surf + section h2{
+    font-size: 1.4rem;
+}
+
+.surf h2::after, .surf + section h2::after, #arrow h2::after, #arrow + section h2::after, 
+.mobile_sites article h2::after, .connect h2::after, .sect11 + section h2::after,
+.sect11 h3::after, .deux_articles h3::after{
+    margin-left: 0 !important;
+}
+
+.surf + section h2{
+    width: 60%;
+}
+
+/* --------------------------
+        08 := section 7
+------------------------- */
+#arrow{
+    padding: 4rem 8rem 6rem;
+}
+
+#arrow .arrow{
+    margin-left: .8rem;
+    align-self: center;
+}
+
+.milieu{
+    width: 90%;
+    margin: 0;
+}
+
+#arrow h2, #arrow .margin{
+    margin-left: 3rem !important;
+}
+
+#arrow div{
+    justify-content: space-between;
+    padding: 2rem 3rem 0;
+}
+
+.cote{
+    width: 30%;
+}
+
+.cote h3{
+    font-weight: lighter;
+}
+
+.cote p{
+    margin: 1rem 0;
+    width: 100% !important;
+}
+
+.cote img{
+    width: 1.5rem !important;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    opacity: .5;
+}
+
+.cote img:first-child{
+    margin-left: 0;
+}
+
+/* --------------------------
+        09 := section 9
+------------------------- */
+.mobile_sites{
+    justify-content: space-between;
+}
+
+.mobile_sites article{
+    width: 38%;
+    padding-top: 7rem;
+}
+
+#arrow + section h2::after, .mobile_sites article h2::after, 
+.sect11 h3::after, .deux_articles h3::after{
+    width: 60% !important;
+}
+
+.mobile_sites article h2, .mobile_sites article p{
+    margin: 0;
+    width: 90%;
+}
+
+.mobile_sites article h2{
+    text-align: start;
+    font-size: 1.5rem;
+}
+
+.mobile_sites article img{
+    width: 9rem;
+    margin-top: 2rem;
+}
+
+.mobile_sites figure{
+    width: 60%;
+}
+
+
+
+/* --------------------------
+        10 := section 10
+------------------------- */
+.connect article{
+    justify-content: space-between;
+}
+
+.connect article div{
+    width: 30%;
+    align-self: center;
+}
+
+.connect div div{
+    width: 100%;
+}
+
+.connect article p{
+    margin: 0;
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.connect article figure{
+    width: 65%;
+}
+
+
+/* --------------------------
+        11 := section 11
+------------------------- */
+.sect11{
+    justify-content: space-around;
+}
+
+.sect11 figure{
+    border-right: 1px solid rgb(215, 215, 215);
+    width: 60%;
+}
+
+.sect11 article{
+    width: 40%;
+    margin-top: 8%;
+    padding-left: 2rem;
+}
+
+.sect11 h3{
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+}
+
+
+
+/* --------------------------
+        12 := section 13
+------------------------- */
+.deux_articles{
+    justify-content: space-between;
+}
+
+.deux_articles article{
+    width: 42%;
+}
+
+.deux_articles h3{
+    font-size: 1.5rem;
+}
+
+.deux_articles p{
+    margin-top: .8rem;
+    margin-bottom: 1.5rem;
+}
+
+p.mt{
+    margin-bottom: 2.5rem;
+}
+
+section.mt{
+    margin-top: 2rem;
+}
+
+h3 span{
+    background-color: rgb(85, 202, 144);
+    color: white;
+    padding: .5rem;
+    font-size: .8rem;
+    border-radius: .3rem;
+    margin-left: 1rem;
+    z-index: 5;
+    position: relative;
+    top: -0.3rem;
+}
+
+.vert{
+    flex-wrap: nowrap;
+}
+
+.homme{
+    border-radius: 50%;
+    width: 28%;
+    z-index: 10;
+}
+
+.homme + div{
+    background-color: rgb(85, 202, 144);
+    color: white;
+    margin: 1rem 0;
+    padding: 2rem 1rem;
+    width: 80%;
+    position: relative;
+    left: -8%;
+}
+
+.vert div img{
+    width: 40%;
+    height: 1rem;
+}
+
+.vert span{
+    padding-right: .8rem;
+    border-right: 1px solid white;
+    margin-right: 1rem;
+    margin-left: 1.5rem;
+}
+
+blockquote{
+    font-size: 1.1rem;
+    color: rgb(127, 127, 127);
+    margin-top: 2rem;
+    width: 80%;
+    margin-left: 4rem;
+    font-style: italic;
+}
+
+blockquote::before{
+    content: "\275D";
+    font-size: 4rem;
+    margin-left: -3rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+}

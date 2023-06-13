@@ -1,0 +1,33 @@
+@charset "UTF-8";
+*{box-sizing: border-box;}
+
+.container-fluid{ 
+  padding: 30px}
+
+.row{ 
+  margin-bottom: 100px;}
+
+.sans{margin: 0;}
+
+form{
+}
+.form-row{
+}
+.espace{padding:30px 5% 30PX 5%;}
+
+i{ padding-right:5px; }
+
+.nav-link{ color:grey; }
+
+li { list-style-type:none; }
+.sans{margin-bottom:none;}
+.rouge{bacground-color:red;}
+
+
+footer{background-color:#ccc;
+padding:20px 50px 20px 50px ;}
+.gauche{float:left;
+padding-right:10px;}
+.para{text-align:left;}
+
+.font{font-family: 'Oxygen', sans-serif;}

@@ -1,0 +1,512 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'nunitoextralight';
+    src: url('../font/nunito-variablefont_wght-webfont.eot');
+    src: url('../font/nunito-variablefont_wght-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/nunito-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../font/nunito-variablefont_wght-webfont.woff') format('woff'),
+         url('../font/nunito-variablefont_wght-webfont.ttf') format('truetype'),
+         url('../font/nunito-variablefont_wght-webfont.svg#nunitoextralight') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+
+html,body{ margin: 0;
+padding: 0; 
+    font-family: 'nunitoextralight';}
+
+p{ line-height: 1.2rem; }
+*{box-sizing: border-box;}
+figure{margin: 0;
+padding: 0;}
+img{
+	width: 100%;
+}
+
+#container{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+
+}
+
+header{
+ background-color: rgb(0, 61, 143, 1);
+ width: 100%;
+}
+
+.fixe{ position: fixed; } 
+
+figure.logo{
+	width: 40%;
+	margin: auto;
+	padding-top: 15px;
+
+}
+
+.bill{ width: 70%;
+float:right; }
+.bill2{width: 50%;
+
+}
+
+ul{
+     width: 100%;
+    display: flex;
+    flex-direction: column;
+  margin-right: 26%;
+  text-decoration: none;
+
+
+}
+li{
+    list-style-type: none;
+    align-self: end;
+    text-decoration: none;
+    padding: 10px;
+
+}
+
+  a:hover{
+    color: white;
+    text-decoration: none;
+  }
+
+  a{ 
+    color: rgba(87, 120, 184, 1);
+    text-decoration: none;
+  }
+section.une{
+display: flex;
+flex-direction: row;	
+ justify-content: space-between;
+ 
+}
+
+section.deux{ display: flex;
+flex-direction: row;	
+ width: 100%;
+ justify-content: space-between;
+ padding-bottom: 0;
+ height: max-content;
+
+}
+
+div.bordure{width: 30%;
+height: 1px;
+background-color: color black;
+position: relative;
+top: 0;
+left: -80px;
+
+
+border-bottom: 5px solid rgba(230, 207, 136, 1);;}	
+
+h1{ width: 50%;
+    
+}
+
+h1.titre{ font-size: 6rem;
+color: rgba(230, 207, 136, 1);}
+
+figure.portrait{/* border: 2px solid black;*/
+         width: 48%;
+
+ }
+ 
+ .ensemble{padding-left: 50px;}
+
+
+h1.titre2{ font-size: 4rem; 
+  } 
+
+
+p.mark{
+       position: relative;
+   left: 2%;
+}
+
+.read{
+  border: none;
+  width: 15%;
+  background-color: rgba(230, 207, 136, 1) ;
+  position: relative;
+  left: 5%;
+  bottom: -5%;
+  height: 10vh;  
+}
+
+h1.marka{
+    position: relative;
+    font-size: 2rem;   
+}
+
+article.para2{ 
+width: 50%; }
+.yoyo{
+    position: relative;
+    font-size: 2rem; 
+    width: 30%;
+
+}
+section.ara{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+}
+
+article.koi{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+figure.femmedos{
+    width: 100%;
+}
+.yoyi{
+  position: relative;
+  width: 70%;
+}
+
+.yiyi{
+ position: relative;
+ align-items: flex-end;
+  width: 70%;   
+}
+figure.groupe{
+	margin: auto;
+    width: 90%;
+
+} 
+
+.lilou{
+   position: relative;
+   margin-top: 100px;
+   z-index: 2;
+}
+
+
+
+section.para{
+  position: relative;
+  padding-left: 40px;
+  
+  width: 100%;    
+}
+
+
+section.sectiono{
+    margin-top: 20%;
+    padding-bottom: 200px;
+  }
+
+.sec3_art1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .sec3_art1 div{
+    position: relative;
+    background-color:rgba(245, 249, 255, 1);
+    width: 70%;
+    padding: 5%;
+    text-align: start;
+    right: 2%;
+    height: 70vh;
+  }
+
+
+
+.sec3_art1 div h2{
+    position: absolute;
+    top: -35%;
+    font-size:3rem;
+    width: 30%;
+  
+  }
+.sec3_art1 div p{
+    position: relative;
+    left: 5%;
+    
+    width: 100%;
+    
+  }
+  .sec3_art1 img{
+    width: 80%;
+    position: relative;
+    top: 13%;
+  }
+  .sec3_art2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+.sec3d{
+    width: 50%;
+    padding: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+  }
+.sec3d span{
+    width: 35%;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 65%;
+  }
+.sec3d p{
+    font-size: 1rem;
+  }
+#sec3d{
+    position: relative;
+    right: 8%;}
+
+
+
+article.accor{
+    border: 2px solid black;
+}
+
+
+section.cinq{ display: flex;
+flex-direction: row;
+ border: 2px solid black;   
+ width: 100%;
+ justify-content: space-between;
+ padding-bottom: 0;
+
+
+}
+
+article.bill4{
+     width: 40%;
+  position: relative;
+  top: -15%;
+
+}
+
+figure.coach{ width: 40%; }
+
+figure.collegues{ width: 100%; }
+
+
+
+button.you{
+      position: relative;
+  width: 30%;
+  border: none;
+  background-color:  rgba(230, 207, 136, 1);
+}
+
+
+section.bot{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+    background-color:rgba(245, 249, 255, 1);
+  font-size: 3rem;
+  height: 16vh;
+  margin-top: 5%;
+}
+
+section.bot span{
+  width: 9%;
+  text-align: center;
+}
+
+span.hours{
+  position: relative;
+  left: 10%;
+
+}
+span.countries{
+  position: relative;
+  right: 12%;
+ 
+
+}
+
+span.cours{
+  position: relative;
+  right: 5%;
+
+
+}
+
+
+
+section.bere{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 6%;
+  }
+div.bordure1{width: 70%;
+height: 1px;
+background-color: color black;
+position: relative;
+border-bottom: 5px solid rgba(230, 207, 136, 1);;} 
+
+article.perso{
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.bily{width:  120px}
+.bily, hgroup{
+    float: left;
+}
+div.bordure1{
+    clear: both;
+}
+.bily img{
+  width: 100%;
+  
+}
+
+
+ 
+
+.perso2{
+    display: flex;
+    flex-direction: row;
+}
+
+  
+
+ {
+  width: 100%;
+border: 2px solid black;
+margin-top: 2%;
+margin-bottom: 5%;
+
+
+
+}
+
+
+
+section.foot{
+  position: relative;
+  top: 60%;
+
+}
+.sec6{
+  position: relative;
+font-size: 2rem;
+
+
+
+}
+.cordo{
+  position: relative;
+ justify-content: space-between;
+  font-size: 1.5rem;
+
+}
+
+.name{
+  position: relative;
+
+
+}
+.email{
+  position: relative;
+  left: 23%;
+
+}
+
+.phone{
+  
+  position: relative;
+  left: 42%;
+
+
+}
+
+
+input{
+  background-color:rgba(245, 249, 255, 1);
+  height: 5vh;
+  border: none;
+
+}
+
+.uno{
+  position: relative;
+
+
+}
+
+.dos{
+position: relative;
+left: 15%;
+
+  
+
+}
+
+.tres{
+  position: relative;
+  left: 27%;
+
+
+
+
+}
+
+.mess{
+  position: relative;
+  
+  background-color:rgba(245, 249, 255, 1) ;
+  border: none;
+  
+
+}
+
+.fine{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+border: 2px solid black;
+  padding-top: 30px;
+  padding-bottom: 40Px;
+}
+
+.fine p{
+  width: 30%;
+  margin: auto;
+
+}
+.fine button{
+  position: relative;
+  width: 10%;
+ border: none;
+    color:;
+    background-color:  rgba(230, 207, 136, 1)
+ ;
+}
+ footer{
+  font-size: 1rem;
+  padding-top: 30px;
+  border: 2px solid black;
+  
+ }
+
+ footer article{
+  width: 100%;
+ }
+
+ .fin{
+    background-color:rgba(245, 249, 255, 1);
+    padding-bottom: 20px;
+ }
+
+
+
+ @media print{ header, footer{ display:none; } }
+
+ @media screen and (max-width: 576px)
